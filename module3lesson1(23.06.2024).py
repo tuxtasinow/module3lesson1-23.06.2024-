@@ -5,16 +5,17 @@ def count_calls():
     calls += 1
 
 def string_info(string):
+    count_calls()
     return len(string), string.upper(), string.lower()
-count_calls()
 
 def is_contains(string, list_to_search):
+    count_calls()
     for i in range(len(list_to_search)):
         if string.lower() == list_to_search[i].lower():
             return True
     else:
         return False
-count_calls()
+
 
 
 print(string_info('Capybara'))
